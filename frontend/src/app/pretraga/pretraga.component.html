@@ -1,0 +1,98 @@
+
+   <!-- <mat-option  *ngFor="let k of knjige" class="a" >
+      
+      <p class="slick-wrapper">
+        <img src="{{k.slika}}" >
+      </p>
+    </mat-option>
+-->
+    <table class="poz" >
+  
+      <tr *ngFor="let row of niz" >
+      <td *ngFor='let k of knjige '  >
+        
+<!--<a>
+       <img src="{{k.slika}}" class="logo" >
+
+      </a>-->
+    <!--<a href={{proveri(k)}} >    </a>-->
+        
+    <button mat-button (click)="proveri(k)">
+        <img src={{k.slika}} class="logo">
+      </button>
+      
+      
+     
+      </td>
+     
+
+      </tr>
+      <tr *ngFor="let row of niz">
+        <td *ngFor='let k of knjige '  >    
+  <a>
+        <a class="naziv"> {{k.naziv}}</a>
+        
+        </a>
+   
+      </td>
+        </tr>
+
+    
+      <tr *ngFor="let row of niz">
+        <td *ngFor='let k of knjige '  >    
+  <a>
+        <a class="autor"> {{k.autor}}</a>
+        
+        </a>
+   
+      </td>
+        </tr>
+
+
+
+          <tr *ngFor="let row of niz">
+            <td *ngFor='let k of knjige '  >    
+      <a>
+            <a class="autor"> {{k.zanr}}</a>
+            
+            </a>
+       
+          </td>
+            </tr>
+            <tr *ngFor="let row of niz">
+              <td *ngFor='let k of knjige '  >    
+        <a>
+              <a class="autor"> {{k.izdavac}}</a>
+              
+              </a>
+         
+            </td>
+              </tr>
+        
+              <tr *ngFor="let row of niz">
+                <td *ngFor='let k of knjige '  >    
+          <a>
+                <a class="autor"> {{k.godinaIzdavanja}}</a>
+                
+                </a>
+           
+              </td>
+                </tr>
+   
+                <tr *ngFor="let row of niz">
+                  <td *ngFor='let k of knjige '  >    
+            <a>
+                  <a class="autor"> {{k.jezik}}</a>
+                  
+                  </a>
+             
+                </td>
+                  </tr>
+      
+    </table>
+   
+
+<div class="v" *ngIf="!knjiga">
+  Жао нам је али немамо ово у понуди
+
+</div>

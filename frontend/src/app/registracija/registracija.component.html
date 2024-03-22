@@ -1,0 +1,64 @@
+
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title *ngIf="!korisnik">Регистрација</mat-card-title>
+        <mat-card-title *ngIf="korisnik">Додавање корисника</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Корисничко име" name="zahtev"[(ngModel)]="zahtev.korIme">
+          </mat-form-field>
+          <a class="error">{{greskaKorIme}}</a>
+
+          <mat-form-field class="example-full-width">
+            <input type="password" matInput placeholder="Лозинка" name="zahtev" [(ngModel)]="zahtev.lozinka">
+          </mat-form-field>
+          <a class="error">{{greskaLozinka}}</a>
+          
+        
+          <mat-form-field class="example-full-width">
+            <input type="password" matInput placeholder="Потврда лозинке" name="zahtev" [(ngModel)]="potvrdaLozinke">
+          </mat-form-field>
+          <a class="error">{{greskaPotvdeLozinke}}</a>
+
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Име и презиме" name="zahtev" [(ngModel)]="zahtev.imePrezime">
+
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Мејл" name="zahtev" [(ngModel)]="zahtev.mejl">
+          </mat-form-field>
+          <a class="error">{{greskaMejl}}</a>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Адреса" name="zahtev" [(ngModel)]=zahtev.adresa>
+          </mat-form-field>
+          
+        
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Телефон" name="zahtev" [(ngModel)]=zahtev.telefon>
+          </mat-form-field>
+          <a class="error">{{greskaTelefon}}</a>
+
+
+     
+        </mat-card-content> <img src={{zahtev.slika}} class="logo">
+        <input type="file" (change)="onFileSelected($event)"  class="btn-block">
+         <br>
+         <br>
+        
+        <button mat-stroked-button color="accent" class="btn-block" (click)="register()" *ngIf="!korisnik">Региструј</button>
+        <button mat-stroked-button color="accent" class="btn-block" (click)="dodaj()" *ngIf="korisnik">Додај</button>
+        
+      </form>
+      <a class="error">{{greska}}</a>
+    </mat-card>
+  </div>
+
+
+  

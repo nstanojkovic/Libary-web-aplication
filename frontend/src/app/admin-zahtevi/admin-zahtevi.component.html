@@ -1,0 +1,28 @@
+<a class="box" *ngIf="zahtevi.length" >
+    <table border="1" >
+        <tr class="t">
+            <th class="naziv"><button mat-button class="n" >Корисничко име</button></th>
+            <th class="naziv"><button mat-button class="n" >Име презиме</button></th>
+          
+          <!-- <th class="m"></th>-->
+        
+        </tr>
+        <tr class="autor">
+            <tr *ngFor='let i of zahtevi' class="autor" >
+                <td class="autor" >{{i.korIme}}</td>
+                <td class="autor" >{{i.imePrezime}}</td>
+           
+                <td class="naziv"><button mat-stroked-button class="f" (click)="dodaj(i)" >Потврди</button></td>
+                <td class="naziv"><button mat-stroked-button class="f"  (click)="azuriraj(i)">Види</button></td>
+                <td class="naziv"><button mat-stroked-button class="f" (click)="obrisi(i)" >Одбиј</button></td>
+                
+            </tr>
+     
+    </table>
+    
+    </a>
+    
+    <div class="v" *ngIf="!zahtevi.length">
+       Нема захтева
+        
+        </div>

@@ -1,0 +1,65 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Захтев</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+        
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Назив" name="knjiga5"  [(ngModel)]="zahtev.naziv" class="a" [disabled]="true">
+            
+          </mat-form-field>
+          <a class="error"></a>
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Аутор" name="knjiga4"  [(ngModel)]="zahtev.autor" class="a" [disabled]="true">
+          </mat-form-field>
+         
+          <a class="error"></a>
+          
+        
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Издавач" name="knjiga2"  [(ngModel)]="zahtev.izdavac" class="a" [disabled]="true">
+          </mat-form-field>
+          <a class="error"></a>
+
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Жанр" name="knjiga22"  [(ngModel)]="zahtev.zanr" class="a" [disabled]="true" >
+
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Година издавања" name="knjigaа"  [(ngModel)]="zahtev.godinaIzdavanja"  class="a" [disabled]="true">
+          </mat-form-field>
+      
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Језик"  name="knjiga" [(ngModel)]="zahtev.jezik" class="a" [disabled]="true">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Корисник"  name="knjiga222" [(ngModel)]="zahtev.korisnik" class="a" [disabled]="true">
+          </mat-form-field>
+          
+        
+         
+
+
+     
+        </mat-card-content> <img src={{zahtev.slika}} class="logo">
+      
+        <br>
+        <br>
+        
+        <button mat-stroked-button color="accent" class="btn-block" (click)="potvrdi()" >Потврди</button>
+        <button mat-stroked-button color="accent" class="btn-block" (click)="odbij()" >Одбиј</button>
+        
+      </form>
+      <a class="error">{{greska}}</a>
+    </mat-card>
+  </div>
+
+
+  

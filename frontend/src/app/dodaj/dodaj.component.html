@@ -1,0 +1,144 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" *ngIf="korisnik.type=='moderator' || korisnik.type=='admin'">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Додавање књиге</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Назив" name="knjiga"  [(ngModel)]="naziv">
+          </mat-form-field>
+          <a class="error"></a>
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Аутор" name="knjiga"  [(ngModel)]="autor">
+          </mat-form-field>
+          <a class="error"></a>
+          
+        
+         <!-- <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Жанр" name="knjiga"  [(ngModel)]="zanr" >
+          </mat-form-field>
+          <a class="error"></a>
+-->
+ <mat-form-field class="example-ten-width">
+            <mat-label>Жанр</mat-label>
+            <mat-select  placeholder="participants" [(value)]="o"   [(value)]="zanr"  multiple  >
+           
+              <mat-option [disabled]="o.length>=3 && sp('драма')" value="драма" class="a"> Драма</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('комедија')" value="комедија" class="a" >Комедија</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('реализам')" value="реализам" class="a">Реализам</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('класик')" value="класик" class="a">Класик</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('домаћа')" value="домаћа" class="a"> Домаћа</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('страна')" value="страна" class="a" >Страна</mat-option>
+  
+              </mat-select>
+            
+         
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Издавач" name="knjiga"  [(ngModel)]="izdavac"  >
+
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Година издавања" name="knjiga"  [(ngModel)]="godinaIzdavanja" >
+          </mat-form-field>
+          <a class="error">{{greskaGod}}</a>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Језик"  name="knjiga" [(ngModel)]="jezik" >
+          </mat-form-field>
+          
+        
+         
+
+
+     
+        </mat-card-content> <img src={{slika}} class="logo">
+        <input type="file" (change)="onFileSelected($event)"  class="btn-block">
+         <br>
+         <br>
+        
+        <button mat-stroked-button color="accent" class="btn-block" (click)="dodaj()" >Додај</button>
+        
+      </form>
+      <a class="error">{{greska}}</a>
+    </mat-card>
+  </div>
+
+
+
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" *ngIf="korisnik.type!='moderator' && korisnik.type!='admin'">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Захтев</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Назив" name="knjiga"  [(ngModel)]="naziv">
+          </mat-form-field>
+          <a class="error"></a>
+
+          <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Аутор" name="knjiga"  [(ngModel)]="autor">
+          </mat-form-field>
+          <a class="error"></a>
+          
+        
+         <!-- <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Жанр" name="knjiga"  [(ngModel)]="zanr" >
+          </mat-form-field>
+          <a class="error"></a>
+-->
+<mat-form-field class="example-ten-width">
+            <mat-label>Жанр</mat-label>
+            <mat-select  placeholder="participants" [(value)]="o"   [(value)]="zanr"  multiple  >
+           
+              <mat-option [disabled]="o.length>=3 && sp('драма')" value="драма" class="a"> Драма</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('комедија')" value="комедија" class="a" >Комедија</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('реализам')" value="реализам" class="a">Реализам</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('класик')" value="класик" class="a">Класик</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('домаћа')" value="домаћа" class="a"> Домаћа</mat-option>
+                <mat-option [disabled]="o.length>=3 && sp('страна')" value="страна" class="a" >Страна</mat-option>
+  
+              </mat-select>
+            
+         
+          </mat-form-field>
+          
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Издавач" name="knjiga"  [(ngModel)]="izdavac"  >
+
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Година издавања" name="knjiga"  [(ngModel)]="godinaIzdavanja" >
+          </mat-form-field>
+          <a class="error">{{greskaGod}}</a>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Језик"  name="knjiga" [(ngModel)]="jezik" >
+          </mat-form-field>
+          
+        
+         
+
+
+     
+        </mat-card-content> <img src={{slika}} class="logo">
+        <input type="file" (change)="onFileSelected($event)"  class="btn-block">
+         <br>
+         <br>
+        
+        <button mat-stroked-button color="accent" class="btn-block" (click)="dodajZ()" >Додај</button>
+        
+      </form>
+      <a class="error">{{greska}}</a>
+    </mat-card>
+  </div>
+
+  

@@ -1,0 +1,34 @@
+
+
+
+<a class="box" *ngIf="korisnik && podaci.length" >
+<table border="1" >
+    <tr class="t">
+        <th class="naziv"><button mat-button class="n" (click)="sortNaziv()">Назив</button></th>
+        <th class="naziv"><button mat-button class="n" (click)="sortAutor()">Аутор</button></th>
+        <th class="naziv"><button mat-button class="n" (click)="sortDatumUzimanja()">Задужено</button></th>
+        <th class="naziv"><button mat-button class="n" (click)="sortDatumVracanja()">Враћено</button></th>
+        <th class="m"></th>
+    </tr>
+    <tr class="autor">
+        <tr *ngFor='let i of podaci' class="autor" >
+            <td class="autor" >{{i.naziv}}</td>
+            <td class="autor" >{{i.autor}}</td>
+            <td class="autor">{{d(i.datumUzimanja)}}</td>
+            <td class="autor">{{d(i.datumVracanja)}}</td>
+            <td class="naziv"><button mat-stroked-button class="f" (click)="promeni(i.knjiga)" *ngIf="!korisnik.blokiran">Преглед</button></td>
+            
+            
+        </tr>
+ 
+</table>
+
+</a>
+
+<div class="v" *ngIf="!podaci.length">
+    Нисте задуживали књиге
+    
+    </div>
+
+
+

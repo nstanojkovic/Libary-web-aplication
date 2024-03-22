@@ -1,0 +1,74 @@
+<table class="poz" *ngIf="provera">
+  
+    <tr *ngFor="let row of niz" >
+    <td *ngFor='let k of knjige '  >
+      
+<a>
+     <img src="{{k.slika}}" class="logo" >
+
+    </a>
+  
+   
+    </td>
+   
+
+
+      <tr *ngFor="let row of niz">
+        <td *ngFor='let k of knjige '  >    
+  <a>
+        <a class="autor"> {{k.autor}}</a>
+        
+        </a>
+   
+      </td>
+        </tr>
+
+
+
+        <tr *ngFor="let row of niz" >
+          <td *ngFor='let k of knjige '  >    
+            <a hidden>{{rok(k)}}</a>
+    <a *ngIf="provera1">
+          <a class="autor"> Још:{{-rok(k)}} дана</a>
+          <button mat-stroked-button class="pp" (click)="produzi(k)" *ngIf="proveraProduzi(k)" >Продужи</button>
+          </a>
+
+          <a *ngIf="!provera1">
+            <a class="autor1"> Касни:{{rok(k)}} дана</a>
+            
+            </a>
+     
+        </td>
+          </tr>
+
+
+
+
+  
+    <tr *ngFor="let row of niz">
+      <td *ngFor='let k of knjige '  >    
+<a>
+    <button mat-stroked-button class="p" (click)="razduzi(k)" >Раздужи</button>
+    <button mat-stroked-button class="p" (click)="skoci(k)" *ngIf="!korisnik.blokiran">Књига</button>
+  
+      
+      </a>
+ 
+    </td>
+
+      </tr>
+
+
+      <tr>
+
+      </tr>
+
+
+  </table>
+ 
+
+<div class="v" *ngIf="!provera">
+Нема задужених књига
+
+</div>
+

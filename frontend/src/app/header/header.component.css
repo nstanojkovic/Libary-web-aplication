@@ -1,0 +1,60 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .example-ten-width {
+    width: 12%;
+  }
+  .example-half-width {
+    width: 20%;
+  }
+
+
+  .logo {
+    height: 50px;
+    width: 100%;
+   /* padding-top: 50px;*/
+   /* padding-left: 0px;*/
+   /* padding-bottom: 50px;*/
+   position: relative;
+   left: 400%;
+
+    
+}
+.logoo {
+  position: relative;
+  height: 50px;
+  width: 100%;
+ /* padding-top: 50px;*/
+ /* padding-left: 0px;*/
+ /* padding-bottom: 50px;*/
+ position: relative;
+ left: 100%;
+  
+}
+
+.headerLogo {
+    float: left;   
+}
+
+.headerName {
+    float: right;   
+}
+.dugme{
+    position: relative;
+   left: 400px; 
+   
+}
+.k{
+  background-color: grey;
+}
+
+
+
+  

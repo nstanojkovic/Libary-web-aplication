@@ -1,0 +1,46 @@
+<a class="box" *ngIf="knjige.length" >
+<table>
+
+<td>
+    <table border="1" >
+        <tr class="t">
+            <th class="naziv"><button mat-button class="n" >Назив</button></th>
+            <th class="naziv"><button mat-button class="n" >Аутор</button></th>
+            <th class="naziv"><button mat-button class="n" >Издавач</button></th>
+           
+            
+          
+          <!-- <th class="m"></th>-->
+        
+        </tr>
+        <tr class="autor">
+            <tr *ngFor='let i of knjige' class="autor"  >
+             
+
+                <td class="autor" >{{i.naziv}}</td>
+                <td class="autor" >{{i.autor}}</td>
+                <td class="autor" >{{i.izdavac}}</td>
+             
+           
+             
+                <td class="naziv"><button mat-stroked-button class="f" (click)="azuriraj(i)" >Ажурирај</button></td>
+                <td class="naziv"><button mat-stroked-button class="f" (click)="obrisi(i)" >Обриши</button></td><a *ngIf="pr==i"
+                class="ee">{{greska}}</a>
+
+
+            </tr>
+     
+    </table>
+</td>
+<td>
+    <button mat-stroked-button  (click)="dodaj()" class="x">Додај књигу</button>
+    
+   </td>
+
+</table>
+
+    </a>
+    
+    <div class="v" *ngIf="!knjige.length">
+       Нема књига
+        </div>

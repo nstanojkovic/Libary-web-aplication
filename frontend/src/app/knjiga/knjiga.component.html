@@ -1,0 +1,187 @@
+
+<table  class="p">
+    <tr>
+    <td >
+<img src="{{knjiga.slika}}" class="a">
+    </td>
+<td>
+<table class="poz">
+    <tr >
+        <td>
+        <button mat-button class="jjj"  > Назив:</button>
+    </td>
+    <td class="naziv">
+        {{knjiga.naziv}}
+    </td>
+        
+    </tr>
+
+    <tr>
+        <td>
+        <button mat-button class="jjj"  > Аутор:</button>
+    </td>
+    <td class="autor">
+{{knjiga.autor}}
+    </td>
+    </tr>
+
+    <tr>
+        <td>
+        <button mat-button class="jjj"  > Издавач:</button>
+    </td>
+    <td class="autor">
+        {{knjiga.izdavac}}
+    </td>
+    </tr>
+
+    <tr>
+        <td>
+        <button mat-button class="jjj" > Жанр:</button>
+    </td>
+    <td class="autor">
+        {{knjiga.zanr}}
+    </td>
+
+    </tr>
+    <tr>
+        <td>
+        <button mat-button class="jjj" > Година издавања:</button>
+    </td>
+    <td class="autor">
+        {{knjiga.godinaIzdavanja}}
+    </td>
+    </tr>
+
+    <tr>
+        <td>
+        <button mat-button class="jjj"  > Језик:</button>
+    </td>
+    <td class="autor">
+        {{knjiga.jezik}}
+    </td>
+    </tr>
+
+    <tr>
+        <td>
+        <button mat-button class="jjj" *ngIf="knjiga.broj!=0"  > Број књига:</button>
+        <button mat-button class="error" *ngIf="knjiga.broj==0" > Број књига:</button>
+
+    </td>
+    <td class="autor" *ngIf="knjiga.broj!=0">
+        {{knjiga.broj}}
+    </td>
+    <td class="error" *ngIf="knjiga.broj==0">
+        {{knjiga.broj}}
+    </td>
+    </tr>
+
+
+</table>
+</td>
+<td>
+    
+    <button mat-stroked-button  class="j" *ngIf="!provera && !provera1 && !provera2 && !provera3 && korisnik.type!='admin'" (click)="zaduzi()"> 
+        Задужи:</button>
+
+<div>
+    <button mat-stroked-button  class="j" *ngIf="(korisnik.type=='moderator' || korisnik.type=='admin')&& !provera && !provera1 && !provera2 
+    && !provera3 "
+     (click)="azuriraj()" > Ажурирај:</button>
+</div>
+   
+</td>
+
+<td >
+    <button mat-stroked-button  class="x" *ngIf="provera && korisnik.type!='admin'" > {{greskaZaduzivanje}}</button>
+
+<div>
+    <button mat-stroked-button  class="x" *ngIf="provera1 && korisnik.type!='admin'" > {{greskaZaduzivanje1}}</button>
+</div>
+<div >
+    <button mat-stroked-button  class="x" *ngIf="provera2 && korisnik.type!='admin'" > {{greskaZaduzivanje2}}</button>
+</div>
+<div >
+    <button mat-stroked-button  class="x" *ngIf="provera3 && korisnik.type!='admin'" > {{greskaZaduzivanje3}}</button>
+</div>
+<div>
+    <button mat-stroked-button  class="x1" *ngIf="(korisnik.type=='moderator' || korisnik.type=='admin') &&
+     (provera || provera1 ||provera2 ||provera3)
+    " (click)="azuriraj()" > Ажурирај:</button>
+</div>
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+
+
+
+    
+
+<table   class="tabela" border="0.9">
+   
+    <button mat-button  class="t" > Просечна оцена<a *ngIf="knjiga.ocena>0"> {{knjiga.ocena| number:'1.0-3'}}</a></button> 
+    <tr class="naziv">
+        <th rowspan="1" *ngIf="komentari.length">Читалац</th>
+        <th *ngIf="komentari.length">Оцена</th>
+        <th *ngIf="komentari.length">Коментар</th>
+        <th *ngIf="!komentari.length" class="autor">Тренутно нема коментара</th>
+
+    </tr>
+
+    <tr *ngFor='let k of komentari' class="autor" >
+        
+        <td class="tt"><mat-icon *ngIf="k.azurirano">star</mat-icon>{{k.korisnik}}</td>
+        <td >{{k.ocena}}</td>
+        <td>{{k.komentar}}</td>
+        
+    
+    </tr>
+
+    <tr>
+        <pre></pre>
+    </tr>
+</table>
+
+
+
+<a class="r" *ngIf="korisnik.type!='admin'">
+    <button mat-button  class="jjj" > Оцена:</button> 
+<mat-radio-group aria-label="Select an option" [(ngModel)]="ocena" >
+    <mat-radio-button value='1'> </mat-radio-button>1
+    <mat-radio-button value=2> </mat-radio-button>2
+    <mat-radio-button value=3> </mat-radio-button>3
+    <mat-radio-button value=4> </mat-radio-button>4
+    <mat-radio-button value=5>  </mat-radio-button>5
+    <mat-radio-button value=6> </mat-radio-button>6
+    <mat-radio-button value=7> </mat-radio-button>7
+    <mat-radio-button value=8> </mat-radio-button>8
+    <mat-radio-button value=9> </mat-radio-button>9
+    <mat-radio-button value=10> </mat-radio-button>10
+  </mat-radio-group>
+  <div></div>
+  <mat-form-field class="field" >
+  <input matInput placeholder="Коментар" name="username"  [(ngModel)]="komentar" maxlength="1000">
+
+</mat-form-field>
+<button mat-button class="jj" (click)="potvrdi()" *ngIf="!gkomentar && b && korisnik.type!='admin'" >Додај коментар</button>
+
+<button mat-button class="jj" (click)="azurirajKom()" *ngIf="gkomentar && korisnik.type!='admin'" >Ажурирај коментар</button>
+
+<button mat-button class="ejj" *ngIf="gkomentar || !b && korisnik.type!='admin'" (click)="p()" >{{greskaKomentr}}</button>
+
+
+
+</a>
+
+
+
+
+
+
+
+

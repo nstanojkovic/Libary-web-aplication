@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "6321e3d7629c852155006a27"
+  },
+  "knjiga": 1,
+  "datumUzimanja": "2022-5-20",
+  "datumVracanja": "2022-6-1",
+  "korisnik": "pera",
+  "naziv": "Ромео и Јулија",
+  "autor": "Шекспир Вилијам"
+},{
+  "_id": {
+    "$oid": "6322358b629c852155006a44"
+  },
+  "knjiga": 3,
+  "datumUzimanja": "2022-5-25",
+  "datumVracanja": "2022-7-21",
+  "korisnik": "pera",
+  "naziv": "Рат и мир",
+  "autor": "Толстој Лав"
+},{
+  "_id": {
+    "$oid": "63224b9f629c852155006a45"
+  },
+  "knjiga": 2,
+  "datumUzimanja": "2022-4-20",
+  "datumVracanja": "2022-5-1",
+  "korisnik": "pera",
+  "naziv": "Тврђава",
+  "autor": "Селимовић Меша"
+},{
+  "_id": {
+    "$oid": "63236aef7d5980be0416c3d8"
+  },
+  "knjiga": 3,
+  "datumUzimanja": "2022-5-14",
+  "datumVracanja": "2022-09-15T18:11:59.812Z",
+  "korisnik": "maja",
+  "naziv": "Рат и мир",
+  "autor": "Толстој Лав",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63238c55a020b0f439f2d2f2"
+  },
+  "knjiga": 2,
+  "datumUzimanja": "2022-7-14",
+  "datumVracanja": "2022-09-15T20:34:29.736Z",
+  "korisnik": "maja",
+  "naziv": "Тврђава",
+  "autor": "Селимовић Меша",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6325b59160b6cfaedea36c41"
+  },
+  "knjiga": 5,
+  "datumUzimanja": "Sat Sep 17 2022 13:43:54 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "2022-09-17T11:54:57.794Z",
+  "korisnik": "ana",
+  "naziv": "Коштана",
+  "autor": "Станковић Бора",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6325b6609dd6103787827c95"
+  },
+  "knjiga": 5,
+  "datumUzimanja": "Sat Sep 17 2022 13:57:08 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "2022-09-17T11:58:24.579Z",
+  "korisnik": "paja",
+  "naziv": "Коштана",
+  "autor": "Станковић Бора",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63261ccde7a7ad8e43a3feb7"
+  },
+  "knjiga": 4,
+  "datumUzimanja": "2022-6-19",
+  "datumVracanja": "2022-7-23",
+  "korisnik": "ana",
+  "naziv": "На Дрини ћуприја",
+  "autor": "Андрић Иво",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63261d5ce7a7ad8e43a3febd"
+  },
+  "knjiga": 4,
+  "datumUzimanja": "2022-3-19",
+  "datumVracanja": "2022-3-21",
+  "korisnik": "paja",
+  "naziv": "На Дрини ћуприја",
+  "autor": "Андрић Иво",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6329f5008b5d2a2b8e9c9fb9"
+  },
+  "knjiga": 6,
+  "datumUzimanja": "Tue Sep 15 2022 04:26:00 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "2022-09-20T17:14:40.103Z",
+  "korisnik": "ana",
+  "naziv": "Ана Карењина",
+  "autor": "Толстој Лав",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a290dd42696da02da6a80"
+  },
+  "knjiga": 6,
+  "datumUzimanja": "2022-5-25",
+  "datumVracanja": "2022-6-6",
+  "korisnik": "jova",
+  "naziv": "Ана Карењина",
+  "autor": "Толстој Лав",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a2955d42696da02da6a81"
+  },
+  "knjiga": 4,
+  "datumUzimanja": "2022-4-19",
+  "datumVracanja": "2022-5-23",
+  "korisnik": "jova",
+  "naziv": "На Дрини ћуприја",
+  "autor": "Андрић Иво",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a297cd42696da02da6a82"
+  },
+  "knjiga": 5,
+  "datumUzimanja": "2022-6-23",
+  "datumVracanja": "2022-6-29",
+  "korisnik": "jova",
+  "naziv": "Коштана",
+  "autor": "Станковић Бора",
+  "__v": 0
+}]

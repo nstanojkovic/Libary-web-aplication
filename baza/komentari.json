@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "631fb7178f835a051baa4431"
+  },
+  "korisnik": "pera",
+  "ocena": 8,
+  "komentar": "Добра књига, али очекивао сам више",
+  "knjiga": 2,
+  "datum": "2022-8-2",
+  "azurirano": true
+},{
+  "_id": {
+    "$oid": "631fb7918f835a051baa4432"
+  },
+  "korisnik": "paja",
+  "ocena": 9,
+  "komentar": "Тешка прича, ова књига се мора прочита",
+  "knjiga": 2,
+  "datum": "2022-8-15",
+  "azurirano": false
+},{
+  "_id": {
+    "$oid": "6321b6127bb355ba2d7e046f"
+  },
+  "knjiga": 5,
+  "korisnik": "ana",
+  "ocena": 9,
+  "komentar": "Добра књига, свиђа ми се ",
+  "datum": "2022-09-14T11:08:02.017Z",
+  "azurirano": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632623ddac7bb8769afe157e"
+  },
+  "knjiga": 1,
+  "korisnik": "pera",
+  "ocena": 9,
+  "komentar": "Занимљива и поучна књига",
+  "datum": "2022-09-17T19:45:33.485Z",
+  "azurirano": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632626aeac7bb8769afe15cd"
+  },
+  "knjiga": 3,
+  "korisnik": "maja",
+  "ocena": 9,
+  "komentar": "Занимљива књига",
+  "datum": "2022-09-17T19:57:34.811Z",
+  "azurirano": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63291efca7a937322bda899a"
+  },
+  "knjiga": 3,
+  "korisnik": "pera",
+  "ocena": 8,
+  "komentar": "Добра књига, вреди да се прочита",
+  "datum": "2022-09-20T02:01:32.763Z",
+  "azurirano": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6329f5748b5d2a2b8e9c9fe2"
+  },
+  "knjiga": 6,
+  "korisnik": "ana",
+  "ocena": 9,
+  "komentar": "Занимљива књига",
+  "datum": "2022-09-20T17:16:36.928Z",
+  "azurirano": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a258fd0582eed614251be"
+  },
+  "knjiga": 4,
+  "korisnik": "ana",
+  "ocena": 8,
+  "komentar": "Вреди да се прочита",
+  "datum": "2022-09-20T20:41:51.570Z",
+  "azurirano": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a2a05d0582eed614252a0"
+  },
+  "knjiga": 6,
+  "korisnik": "jova",
+  "ocena": 6,
+  "komentar": "Очекивао сам више",
+  "datum": "2022-09-20T21:00:53.197Z",
+  "azurirano": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a2a36d0582eed614252b3"
+  },
+  "knjiga": 5,
+  "korisnik": "jova",
+  "ocena": 5,
+  "komentar": "Нисам задовољан",
+  "datum": "2022-09-20T21:01:42.055Z",
+  "azurirano": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a2a4bd0582eed614252c8"
+  },
+  "knjiga": 4,
+  "korisnik": "jova",
+  "ocena": 10,
+  "komentar": "Одлична књига",
+  "datum": "2022-09-20T21:02:03.012Z",
+  "azurirano": true,
+  "__v": 0
+}]

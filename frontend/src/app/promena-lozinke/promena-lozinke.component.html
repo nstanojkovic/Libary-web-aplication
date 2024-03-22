@@ -1,0 +1,33 @@
+
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Промена лозинке</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Стара лозинка" name="password" [(ngModel)]="lozinka" type="password">
+            <output matInput placeholder="greskaLozinka" *ngIf="glozinka" class="error">{{greskaLozinka}}
+              </output>
+            
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Нова лозинка" name="password" [(ngModel)]="nlozinka" type="password">
+            <output matInput placeholder="greskaLozinka" *ngIf="gnlozinka" class="error">{{greskaNLozinka}}</output>
+          </mat-form-field>
+       
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Потврда лозинке" name="password" [(ngModel)]="nnlozinka" type="password">
+            <output matInput placeholder="greskaLozinka" *ngIf="gnnlozinka" class="error">{{greskaNNLozinka}}</output>
+          </mat-form-field>
+
+        </mat-card-content>
+
+        <button mat-stroked-button color="accent" class="btn-block" (click)="promeni()">Промени</button>
+        <a class="error">{{greska}}</a>
+      </form>
+    </mat-card>
+  </div>

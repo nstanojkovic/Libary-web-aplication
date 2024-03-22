@@ -1,0 +1,42 @@
+
+<app-header ></app-header>
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>{{korisnik.imePrezime}}</mat-card-title>
+        <div class="headerLogo">
+  
+           <img src={{korisnik.slika}} class="logo">
+        </div>
+       
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+
+          <mat-form-field >
+          
+            <button mat-button > <mat-icon>perm_identity</mat-icon>{{korisnik.username}}</button>
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width">
+            <button mat-button > <mat-icon>mail</mat-icon>{{korisnik.mejl}}</button>
+          </mat-form-field>
+         
+
+          <mat-form-field class="example-full-width">
+            <button mat-button > <mat-icon>address</mat-icon>{{korisnik.adresa}}</button>
+          </mat-form-field>
+          
+        
+          <mat-form-field class="example-full-width">
+            <button mat-button > <mat-icon>call</mat-icon>{{korisnik.telefon}}</button>
+          </mat-form-field>
+        
+
+        </mat-card-content>
+
+        
+      </form>
+      
+    </mat-card>
+  </div>

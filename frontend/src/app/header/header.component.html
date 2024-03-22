@@ -1,0 +1,154 @@
+
+
+
+<mat-toolbar color="primary">
+
+ 
+    <mat-toolbar-row class="example-full-width" *ngIf="!korisnik" >
+      <h4>Библиотека</h4>
+      
+
+          <button mat-button (click)="pocetna()" > <mat-icon>home</mat-icon>Почетна</button>
+      <button mat-button  (click)="prijava()"> <mat-icon>login</mat-icon>Пријава</button>
+    
+      <button mat-button  (click)="registracija()" > <mat-icon>add_circle_outline</mat-icon>Регистрација</button>
+
+
+      <pre>            </pre>
+     <mat-form-field class="example-half-width" >
+        <input matInput placeholder="Претражи" [(ngModel)]="searchParam" >
+      </mat-form-field>
+
+      <button mat-button  (click)="pretraga()" > Претражи</button>
+     
+      <div class="headerLogo">
+   
+        <a href={{proveri()}} >
+        
+       <img src={{slika}} class="logo">
+
+      </a>
+     
+       
+      </div>
+
+    </mat-toolbar-row>
+ 
+    
+  <!---  <mat-toolbar-row class="example-full-width" *ngIf="korisnik" >-->
+    <mat-toolbar-row class="example-full-width" *ngIf="pp()" >
+   
+          <button mat-button (click)="citalac()" > <mat-icon>home</mat-icon>Почетна</button>
+         <button mat-button (click)="profil()" > <mat-icon>perm_identity</mat-icon>Профил</button>
+          <button mat-button (click)="zaduzeneKnjige()" > <mat-icon>book</mat-icon>Задужене књиге</button>
+          <button mat-button (click)="istorija()" > <mat-icon>history</mat-icon>Историја</button>
+          <button mat-button (click)="promenaLozinke()" > <mat-icon>password</mat-icon>Лозинка</button>
+
+
+          <button mat-button (click)="dodaj()" *ngIf="korisnik.type=='moderator'" > <mat-icon>add_circle_outline</mat-icon>Додај</button>
+          <button mat-button (click)="dodaj()" *ngIf="korisnik.type!='moderator'" > <mat-icon>add_circle_outline</mat-icon>Захтев</button>
+          <button mat-button (click)="zahtevi()" *ngIf="korisnik.type=='moderator'" > Захтеви</button>
+          <button mat-button  (click)="odjavi()"> <mat-icon>logout</mat-icon>Одјава</button>   
+   
+         <!-- <mat-form-field class="example-ten-width">
+            <mat-label>Задужења</mat-label>
+            <mat-select [(value)]="value" name="s" >
+              <mat-option  value="da"> Задужене књиге</mat-option>
+              <mat-option  value="s" >Историја задужења</mat-option>
+              
+            
+            </mat-select>
+          </mat-form-field>
+
+     -->
+
+      <pre>         </pre>
+      <mat-form-field class="example-half-width" >
+        <input matInput placeholder="" [(ngModel)]="searchParam" >
+      </mat-form-field>
+
+      <button mat-button  (click)="pretraga()" > Претражи</button>
+
+
+     
+      <div class="headerLogo" *ngIf="!korisnik">
+   
+        <a href={{proveri()}} >
+        
+
+       <img src={{slika}} class="logo">
+
+      </a>
+     
+      </div>
+
+      <div class="headerLogo" *ngIf="korisnik.type=='moderator' || korisnik.type=='citalac'">
+   
+        <a href={{proveri()}} >
+        
+
+       <img src={{slika}} class="logoo">
+
+      </a>
+     
+      </div>
+
+   
+
+    </mat-toolbar-row>
+
+
+
+    <mat-toolbar-row class="example-full-width" *ngIf="ppp()" >
+   
+      <button mat-button (click)="citalac()" > <mat-icon>home</mat-icon>Почетна</button>
+
+      <button mat-button (click)="profil()"  (click)="adminZahtevi()"> <mat-icon>add_circle_outline</mat-icon>Захтеви</button>
+     <button mat-button (click)="profil()" (click)="adminKorisnici()"> <mat-icon>perm_identity</mat-icon>Корисници</button>
+      <button mat-button (click)="zaduzeneKnjige()" (click)="adminKnjige()" > <mat-icon>book</mat-icon>Књиге</button>
+      <button mat-button (click)="promenaLozinke()" > <mat-icon>password</mat-icon>Лозинка</button>
+      <button mat-button (click)="rok()" > Рок</button>
+
+
+      <button mat-button  (click)="odjavi()"> <mat-icon>logout</mat-icon>Одјава</button>   
+
+
+
+  <pre>         </pre>
+  <mat-form-field class="example-half-width" >
+    <input matInput placeholder="" [(ngModel)]="searchParam" >
+  </mat-form-field>
+
+  <button mat-button  (click)="pretraga()" > Претражи</button>
+
+
+ 
+  <div class="headerLogo" *ngIf="korisnik.type!='moderator'">
+
+    <a href={{proveri()}} >
+    
+
+   <img src={{slika}} class="logo">
+
+  </a>
+ 
+  </div>
+
+  <div class="headerLogo" *ngIf="korisnik.type=='moderator'">
+
+    <a href={{proveri()}} >
+    
+
+   <img src={{slika}} class="logoo">
+
+  </a>
+ 
+  </div>
+
+
+</mat-toolbar-row>
+
+
+</mat-toolbar>
+
+

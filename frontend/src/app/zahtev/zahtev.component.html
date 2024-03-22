@@ -1,0 +1,45 @@
+<div class="box" *ngIf="zahtevi.length" >
+    <table >
+    
+    <td>
+        <table border="1" >
+            <tr class="t">
+                <th class="naziv"><button mat-button class="n" >Корисник</button></th>
+                <th class="naziv"><button mat-button class="n" >Назив</button></th>
+                <th class="naziv"><button mat-button class="n" >Аутор</button></th>
+               
+                
+              
+              <!-- <th class="m"></th>-->
+            
+            </tr>
+            <tr class="autor">
+                <tr *ngFor='let i of zahtevi' class="autor"  >
+                 
+    
+                    <td class="autor" >{{i.korisnik}}</td>
+                    <td class="autor" >{{i.naziv}}</td>
+                    <td class="autor" >{{i.autor}}</td>
+                 
+               
+                 
+                     <td class="naziv"><button mat-stroked-button class="f" (click)="potvrdi(i)" >Потврди</button></td>
+                     <td class="naziv"><button mat-stroked-button class="f" (click)="vidi(i)" >Види</button></td>
+                    <td class="naziv"><button mat-stroked-button class="f" (click)="odbij(i)" >Одбиј</button></td>
+                   <!-- <td class="naziv"><button mat-stroked-button class="f" (click)="obrisi(i)" >Обриши</button></td><a *ngIf="pr==i">{{greska}}</a>
+    
+    -->
+                </tr>
+         
+        </table>
+    </td>
+
+    
+    </table>
+    
+</div>
+        
+        <div class="v" *ngIf="!zahtevi.length">
+           Нема захтева
+            </div>
+    

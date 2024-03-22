@@ -1,0 +1,83 @@
+
+<div class="x" *ngIf="provera()">
+--{{g1}}--{{g3}}--{{g4}}--
+</div>
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <table>
+
+
+    <td>
+   
+    <mat-card class="box">
+    
+      <mat-card-header>
+        
+        <mat-card-title>Књига дана</mat-card-title>
+        
+       
+      </mat-card-header>
+
+      
+      <form class="example-form">
+        <mat-card-content>
+
+
+           <mat-form-field  class="example-form" >
+                <button mat-button class="headerLogo" (click)="proveri()">
+  
+                    <img src={{knjiga.slika}} class="logo">
+                 </button >
+                </mat-form-field>
+             
+                <mat-form-field class="example-form" >
+                    <a >
+                      <button mat-button > <mat-icon>book</mat-icon>Назив</button>
+                    <a class="naziv">  {{knjiga.naziv}}</a>
+                  </a>
+                  
+                    </mat-form-field>
+                                       
+            
+
+          <mat-form-field class="example-form" >
+          <a >
+            <button mat-button > <mat-icon>perm_identity</mat-icon>Аутор</button>
+          <a class="naziv">  {{knjiga.autor}}</a>
+                </a>
+        
+          </mat-form-field>
+         
+          <mat-form-field class="example-form" >
+            <a >
+              <button mat-button > <mat-icon>grade</mat-icon>Оцена</button>
+             <a class="naziv" >{{knjiga.ocena| number:'1.0-3'}}</a> 
+          </a>
+        </mat-form-field>
+
+   
+        </mat-card-content>
+
+        
+      </form>
+  
+      
+    </mat-card>
+    
+  </td>
+
+
+
+
+
+  </table>
+  </div>
+
+
+
+
+ 
+
+
+
+

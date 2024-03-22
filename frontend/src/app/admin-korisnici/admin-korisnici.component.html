@@ -1,0 +1,52 @@
+<a class="box" *ngIf="korisnici.length" >
+    <table>
+        <td>
+    <table border="1" >
+        <tr class="t">
+            <th class="naziv"><button mat-button class="n" >Корисничко име</button></th>
+            <th class="naziv"><button mat-button class="n" >Име презиме</button></th>
+            <th class="naziv"><button mat-button class="n" >Тип</button></th>
+          
+          <!-- <th class="m"></th>-->
+        
+        </tr>
+        <tr class="autor">
+            <tr *ngFor='let i of korisnici' class="autor"  >
+             
+
+                <td class="autor" >{{i.username}}</td>
+                <td class="autor" >{{i.imePrezime}}</td>
+                <td class="autor" >{{i.type}}</td>
+           
+             
+                <td class="naziv"><button mat-stroked-button class="f"  (click)="azuriraj(i)">Ажурирај</button></td>
+                <td class="naziv"><button mat-stroked-button class="f" (click)="obrisi(i)" >Обриши</button></td>
+
+ <td class="naziv"><button mat-stroked-button class="f" (click)="podigni(i)" *ngIf="i.type=='citalac'">Подигни привилегију</button>
+<button mat-stroked-button class="ff" (click)="spusti(i)" *ngIf="i.type=='moderator'">Спусти привилегију</button></td>
+                
+                <td class="naziv">
+                    <button mat-stroked-button class="f" (click)="blokiraj(i)" *ngIf="!i.blokiran" >Блокирај</button> 
+                    <button mat-stroked-button class="ff" (click)="odblokiraj(i)" *ngIf="i.blokiran" >Одлокирај</button> 
+                </td>
+                <a *ngIf="pr==i" class="error">{{greska}}</a>
+
+
+            </tr>
+     
+    </table>
+</td>
+<td>
+    <button mat-stroked-button   class="x" (click)="dodaj()">Додај корисника</button>
+   
+   </td>
+
+</table>
+    
+    </a>
+
+
+    
+    <div class="v" *ngIf="!korisnici.length">
+       Нема корисника
+        </div>

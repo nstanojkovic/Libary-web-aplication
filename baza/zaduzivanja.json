@@ -1,0 +1,111 @@
+[{
+  "_id": {
+    "$oid": "6325b6709dd6103787827ca8"
+  },
+  "knjiga": 2,
+  "datumUzimanja": "Sat Sep 17 2022 13:58:40 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Sat Oct 01 2022 13:58:40 GMT+0200 (Central European Summer Time)",
+  "korisnik": "maja",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63261db1e7a7ad8e43a3fec6"
+  },
+  "knjiga": 3,
+  "datumUzimanja": "2022-8-29",
+  "datumVracanja": "2022-9-10",
+  "korisnik": "paja",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63261e17e7a7ad8e43a3fecd"
+  },
+  "knjiga": 5,
+  "datumUzimanja": "2022-9-9",
+  "datumVracanja": "2022-9-22",
+  "korisnik": "ana",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63261e44e7a7ad8e43a3fece"
+  },
+  "knjiga": 1,
+  "datumUzimanja": "2022-9-11",
+  "datumVracanja": "Tue Oct 04 2022 00:00:00 GMT+0200 (Central European Summer Time)",
+  "korisnik": "ana",
+  "rok": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63261e85e7a7ad8e43a3fed3"
+  },
+  "knjiga": 2,
+  "datumUzimanja": "2022-9-7",
+  "datumVracanja": "2022-9-16",
+  "korisnik": "kosta",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63263e47b88ced09658c344d"
+  },
+  "knjiga": 3,
+  "datumUzimanja": "Sat Sep 17 2022 23:38:15 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Sat Oct 01 2022 23:38:15 GMT+0200 (Central European Summer Time)",
+  "korisnik": "pera",
+  "rok": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6328ed7da7a937322bda8383"
+  },
+  "knjiga": 3,
+  "datumUzimanja": "Tue Sep 20 2022 00:30:21 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Tue Oct 18 2022 00:30:21 GMT+0200 (Central European Summer Time)",
+  "korisnik": "maja",
+  "rok": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63291bd8a7a937322bda88ff"
+  },
+  "knjiga": 1,
+  "datumUzimanja": "Tue Sep 20 2022 03:48:08 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Tue Oct 04 2022 03:48:08 GMT+0200 (Central European Summer Time)",
+  "korisnik": "maja",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6329db588b5d2a2b8e9c9cba"
+  },
+  "knjiga": 5,
+  "datumUzimanja": "Tue Sep 20 2022 17:25:12 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Tue Oct 04 2022 17:25:12 GMT+0200 (Central European Summer Time)",
+  "korisnik": "pera",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a275ad0582eed6142520c"
+  },
+  "knjiga": 2,
+  "datumUzimanja": "Tue Sep 20 2022 22:49:30 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Tue Oct 04 2022 22:49:30 GMT+0200 (Central European Summer Time)",
+  "korisnik": "jova",
+  "rok": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632a2760d0582eed61425220"
+  },
+  "knjiga": 3,
+  "datumUzimanja": "Tue Sep 20 2022 22:49:36 GMT+0200 (Central European Summer Time)",
+  "datumVracanja": "Tue Oct 04 2022 22:49:36 GMT+0200 (Central European Summer Time)",
+  "korisnik": "jova",
+  "rok": false,
+  "__v": 0
+}]

@@ -1,0 +1,26 @@
+
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Пријава</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Корисничко име" name="username" [(ngModel)]="username">
+            <output matInput placeholder="greskaKorIme" *ngIf="gKorIme" class="error">{{greskaKorIme}}
+              </output>
+            
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Лозинка" name="password" [(ngModel)]="password" type="password">
+            <output matInput placeholder="greskaKorIme" *ngIf="glozinka" class="error">{{greskaLozinka}}</output>
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" (click)="login()">Пријави</button>
+        <a class="error">{{message}}</a>
+      </form>
+    </mat-card>
+  </div>
+
